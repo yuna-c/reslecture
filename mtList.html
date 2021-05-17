@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+
+<meta property="og:url" content="//class.sdij.com/">
+<meta property="og:image" content="/img/logo.png">
+<meta property="og:title" content="시대인재">
+<meta property="og:description" content="시대인재대치, 시대인재분당, 시대인재재수종합N, 시대인재북스, 대입전문컨설팅">
+<meta property="og:site_name" content="시대인재">
+<meta name="description" content="시대인재대치, 시대인재분당, 시대인재재수종합N, 시대인재북스, 대입전문컨설팅">
+<meta name="title" content="시대인재">
+<meta name="keywords" content="9월 모평, 수능 대비, 시대인재, 시대인재 서바이벌, 서바이벌 모의고사">
+
+<title>시대인재</title>
+
+<!-- S : favicon -->
+<link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+<link rel="icon" href="./img/favicon_32.png">
+<link rel="icon" href="./img/favicon_32.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="./img/favicon_32.png">
+<link rel="apple-touch-icon-precomposed" href="./img/favicon_32.png">
+<!--// E : favicon -->
+
+<!-- S : css -->
+<link rel="stylesheet" type="text/css" href="./css/reset.css">
+<link rel="stylesheet" type="text/css" href="./css/font.css">
+<link rel="stylesheet" type="text/css" href="./css/layout.css">
+<link rel="stylesheet" type="text/css" href="./css/board.css">
+<!--// E : css -->
+
+<!-- S : js -->
+<script type="text/javascript" src="./js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="./js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<!--// E : js -->
+
+</head>
+<body>
+    <div id="wrap">
+        <!-- S : header -->
+        <header id="header"></header>
+        <!--// E : header -->
+
+        <!-- S : container -->
+        <section id="container" class="layout-container">
+            <!-- S : 컨텐츠 영역 -->
+            <div class="lecture-container">
+                <div class="board-layout">
+
+                    <h2 class="page-tit">강좌 예약 내역</h2>
+
+                    <!-- S : 강좌 예약 리스트 -->
+                    <form method="GET" id="brfListForm" name="brfListForm">
+                        <input type="hidden" name="page" value="">
+                        <input type="hidden" name="campCd" value="">
+                        <input type="hidden" name="stuGrd" value="">
+                        <input type="hidden" name="brfGrpCd" value=""> 
+                        <input type="hidden" name="brfCd" value="">
+
+                            <!-- S : 예약 조회 설명 -->
+                            <ul class="list-dotted mb50">
+                                <li>본 예약내역은 결제 완료 내역이 아닙니다.  예약 후 반드시 학원에서 현장 결제를 부탁 드립니다.</li>
+                                <li>개강 전 까지 결제가 완료 되지 않을 경우 자동으로 예약은 취소 됩니다.</li>
+                                <li>문의처 시대인재 02-552-2373</li>
+                            </ul>
+                            <!--// E : 예약 조회 설명 -->
+
+                            <!-- S : 강좌 취소 리스트 -->
+                            <div class="board-list">
+                                <!-- S : tit -->
+                                <ul class="tit-list">
+                                    <li>과목</li>
+                                    <li>강좌명</li>
+                                    <li>강사</li>
+                                    <li>날짜/시간</li>
+                                    <li>개강일</li>
+                                    <li>예약하기</li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <span>과목</span>
+                                        <span>사설과칼럼</span>
+                                    </li>
+                                    <li class="tit-box">
+                                        <a href="javascript:void" class="txt-sub">
+                                            [수학수우수수수] 수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>강사</span>
+                                        <span>강기원</span>
+                                    </li>
+                                    <li>
+                                        <span>날짜/시간</span>
+                                        <span>
+                                            1월 10일(일)
+                                            09:00~12:30
+                                            (3시간 30분)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>개강일</span>
+                                        <span>1월 10일(일)</span>
+                                    </li>
+                                    <li class="mt10 color-black"><a href="javascript:void(0);" class="txt-link txt-end" onclick="fnOpenLayer('dim-cancel');">취소하기</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <span>과목</span>
+                                        <span>사설과칼럼</span>
+                                    </li>
+                                    <li class="tit-box">
+                                        <a href="javascript:void" class="txt-sub">
+                                            [수학수우수수수] 수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>강사</span>
+                                        <span>강기원</span>
+                                    </li>
+                                    <li>
+                                        <span>날짜/시간</span>
+                                        <span>
+                                            1월 10일(일)
+                                            09:00~12:30
+                                            (3시간 30분)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>개강일</span>
+                                        <span>1월 10일(일)</span>
+                                    </li>
+                                    <li class="mt10"><a href="javascript:void(0);" class="txt-end">취소완료</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <span>과목</span>
+                                        <span>사설과칼럼</span>
+                                    </li>
+                                    <li class="tit-box">
+                                        <a href="javascript:void" class="txt-sub">
+                                            [수학수우수수수] 수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>강사</span>
+                                        <span>강기원</span>
+                                    </li>
+                                    <li>
+                                        <span>날짜/시간</span>
+                                        <span>
+                                            1월 10일(일)
+                                            09:00~12:30
+                                            (3시간 30분)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>개강일</span>
+                                        <span>1월 10일(일)</span>
+                                    </li>
+                                    <li class="mt10 color-black"><a href="javascript:void(0);" class="txt-link txt-end" onclick="fnOpenLayer('dim-cancel');">취소하기</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <span>과목</span>
+                                        <span>사설과칼럼</span>
+                                    </li>
+                                    <li class="tit-box">
+                                        <a href="javascript:void" class="txt-sub">
+                                            [수학수우수수수] 수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>강사</span>
+                                        <span>강기원</span>
+                                    </li>
+                                    <li>
+                                        <span>날짜/시간</span>
+                                        <span>
+                                            1월 10일(일)
+                                            09:00~12:30
+                                            (3시간 30분)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>개강일</span>
+                                        <span>1월 10일(일)</span>
+                                    </li>
+                                    <li class="mt10"><a href="javascript:void(0);" class="txt-end">취소완료</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <span>과목</span>
+                                        <span>사설과칼럼</span>
+                                    </li>
+                                    <li class="tit-box">
+                                        <a href="javascript:void" class="txt-sub">
+                                            [수학수우수수수] 수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>강사</span>
+                                        <span>강기원</span>
+                                    </li>
+                                    <li>
+                                        <span>날짜/시간</span>
+                                        <span>
+                                            1월 10일(일)
+                                            09:00~12:30
+                                            (3시간 30분)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>개강일</span>
+                                        <span>1월 10일(일)</span>
+                                    </li>
+                                    <li class="mt10 color-black"><a href="javascript:void(0);" class="txt-link txt-end" onclick="fnOpenLayer('dim-cancel');">취소하기</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <span>과목</span>
+                                        <span>사설과칼럼</span>
+                                    </li>
+                                    <li class="tit-box">
+                                        <a href="javascript:void" class="txt-sub">
+                                            [수학수우수수수] 수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>강사</span>
+                                        <span>강기원</span>
+                                    </li>
+                                    <li>
+                                        <span>날짜/시간</span>
+                                        <span>
+                                            1월 10일(일)
+                                            09:00~12:30
+                                            (3시간 30분)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>개강일</span>
+                                        <span>1월 10일(일)</span>
+                                    </li>
+                                    <li class="mt10"><a href="javascript:void(0);" class="txt-end">취소완료</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <span>과목</span>
+                                        <span>사설과칼럼</span>
+                                    </li>
+                                    <li class="tit-box">
+                                        <a href="javascript:void" class="txt-sub">
+                                            [수학수우수수수] 수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>강사</span>
+                                        <span>강기원</span>
+                                    </li>
+                                    <li>
+                                        <span>날짜/시간</span>
+                                        <span>
+                                            1월 10일(일)
+                                            09:00~12:30
+                                            (3시간 30분)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>개강일</span>
+                                        <span>1월 10일(일)</span>
+                                    </li>
+                                    <li class="mt10 color-black"><a href="javascript:void(0);" class="txt-link txt-end" onclick="fnOpenLayer('dim-cancel');">취소하기</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <span>과목</span>
+                                        <span>사설과칼럼</span>
+                                    </li>
+                                    <li class="tit-box">
+                                        <a href="javascript:void" class="txt-sub">
+                                            [수학수우수수수] 수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>강사</span>
+                                        <span>강기원</span>
+                                    </li>
+                                    <li>
+                                        <span>날짜/시간</span>
+                                        <span>
+                                            1월 10일(일)
+                                            09:00~12:30
+                                            (3시간 30분)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>개강일</span>
+                                        <span>1월 10일(일)</span>
+                                    </li>
+                                    <li class="mt10"><a href="javascript:void(0);" class="txt-end">취소완료</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <span>과목</span>
+                                        <span>사설과칼럼</span>
+                                    </li>
+                                    <li class="tit-box">
+                                        <a href="javascript:void" class="txt-sub">
+                                            [수학수우수수수] 수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>강사</span>
+                                        <span>강기원</span>
+                                    </li>
+                                    <li>
+                                        <span>날짜/시간</span>
+                                        <span>
+                                            1월 10일(일)
+                                            09:00~12:30
+                                            (3시간 30분)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>개강일</span>
+                                        <span>1월 10일(일)</span>
+                                    </li>
+                                    <li class="mt10 color-black"><a href="javascript:void(0);" class="txt-link txt-end" onclick="fnOpenLayer('dim-cancel');">취소하기</a></li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <span>과목</span>
+                                        <span>사설과칼럼</span>
+                                    </li>
+                                    <li class="tit-box">
+                                        <a href="javascript:void" class="txt-sub">
+                                            [수학수우수수수] 수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학학수학수학수학수학수학수학수학수학수학
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>강사</span>
+                                        <span>강기원</span>
+                                    </li>
+                                    <li>
+                                        <span>날짜/시간</span>
+                                        <span>
+                                            1월 10일(일)
+                                            09:00~12:30
+                                            (3시간 30분)
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>개강일</span>
+                                        <span>1월 10일(일)</span>
+                                    </li>
+                                    <li class="mt10"><a href="javascript:void(0);" class="txt-end">취소완료</a></li>
+                                </ul>
+
+                                <!-- S : no-data -->
+                                <ul class="no-data">
+                                    <li>
+                                        강좌 예약 내역이 없습니다.
+                                    </li>
+                                </ul>
+                                <!--// E : no-data-->
+                            </div>
+                            <!--//E : 강좌 취소 리스트 -->
+                        
+                            <!-- S : 페이지 버튼 -->
+                            <div class="board-pager">
+                                <a href="javascript:void(0);"><span class="ico ico-page-prev2">이전 10개 페이지</span></a>
+                                <a href="javascript:void(0);"><span class="ico ico-page-prev">이전 페이지</span></a>
+
+                                <div class="pager-num">
+                                    <a href="javascript:void(0);" class="on">1</a>
+                                    <a href="javascript:void(0);">2</a>
+                                    <a href="javascript:void(0);">3</a>
+                                    <a href="javascript:void(0);">4</a>
+                                    <a href="javascript:void(0);">5</a>
+                                    <a href="javascript:void(0);">6</a>
+                                    <a href="javascript:void(0);">7</a>
+                                    <a href="javascript:void(0);">8</a>
+                                    <a href="javascript:void(0);">9</a>
+                                    <a href="javascript:void(0);">10</a>
+                                </div>
+
+                                <a href="javascript:void(0);"><span class="ico ico-page-next">다음 페이지</span></a>
+                                <a href="javascript:void(0);"><span class="ico ico-page-next2">다음 10개 페이지</span></a>
+                            </div>
+                            <!--// E : 페이지 버튼 -->
+                    </form>
+                    <!--// E : 강좌 예약 리스트 -->
+                </div>
+            </div>
+            <!--// E : 컨텐츠 영역 -->
+        </section>
+        <!--// E : container -->
+
+        <!-- S : dim-layer -->
+        <div class="dim-layer">
+            <div class="dim-bg"></div>
+
+            <!-- S : 취소 alert -->
+            <div class="dim-content dim-alert dim-tit-alert dim-cancel">
+                
+                <h4 class="dim-tit">본 강좌는 마감된 강좌 입니다.<br>예약을 취소 할 경우<br>다시 예약 하기 어려울 수 있습니다.</h4>
+
+                <div class="dim-btn">
+                    <button type="button" onclick="IfDelProc()" class="btn btn-black btn-confirm">확인</button>
+                    <button type="button" class="btn btn-white pop-close" onclick="$(this).parents('.dim-layer').hide();">취소</button>
+                </div>
+            </div>
+            <!--// E : 취소 alert -->
+
+        </div>
+        <!--// E : dim-layer -->
+
+        <!-- S : footer -->
+        <footer id="footer"></footer>
+        <!--// E : footer -->
+    </div>
+</body>
+
+<script>
+//ApplyPop
+var IfApplyPop = function(){
+    var popWidth = "500";
+    var popHeight = "480";
+    var winHeight = document.body.clientHeight;
+    var winWidth = document.body.clientWidth;
+    var winX = window.screenLeft;
+    var winY = window.screenTop;
+
+    var popX = winX + (winWidth - popWidth)/2;
+    var popY = winY + (winHeight - popHeight)/2;
+
+    var tUrl = "applyPop.html";
+    var tOpt = "width="+popWidth+"px,height="+popHeight+"px,top="+popY+",left="+popX+",scrollbars=no";
+
+    window.open(tUrl, "예약하기", tOpt);
+};
+
+//IfApplyChkPop
+var IfApplyChkPop = function(){
+    var popWidth = "500";
+    var popHeight = "380";
+    var winHeight = document.body.clientHeight;
+    var winWidth = document.body.clientWidth;
+    var winX = window.screenLeft;
+    var winY = window.screenTop;
+
+    var popX = winX + (winWidth - popWidth)/2;
+    var popY = winY + (winHeight - popHeight)/2;
+
+    var tUrl = "applyChkPop.html";
+    var tOpt = "width="+popWidth+"px,height="+popHeight+"px,top="+popY+",left="+popX+",scrollbars=no";
+
+    window.open(tUrl, "예약결과조회", tOpt);
+};
+
+$(function() {
+
+});
+</script>
+</html>

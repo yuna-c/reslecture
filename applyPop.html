@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+
+<meta property="og:url" content="//class.sdij.com/">
+<meta property="og:image" content="/img/logo.png">
+<meta property="og:title" content="시대인재">
+<meta property="og:description" content="시대인재대치, 시대인재분당, 시대인재재수종합N, 시대인재북스, 대입전문컨설팅">
+<meta property="og:site_name" content="시대인재">
+<meta name="description" content="시대인재대치, 시대인재분당, 시대인재재수종합N, 시대인재북스, 대입전문컨설팅">
+<meta name="title" content="시대인재">
+<meta name="keywords" content="9월 모평, 수능 대비, 시대인재, 시대인재 서바이벌, 서바이벌 모의고사">
+
+<title>시대인재</title>
+
+<!-- S : favicon -->
+<link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+<link rel="icon" href="./img/favicon_32.png">
+<link rel="icon" href="./img/favicon_32.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="./img/favicon_32.png">
+<link rel="apple-touch-icon-precomposed" href="./img/favicon_32.png">
+<!--// E : favicon -->
+
+<!-- S : css -->
+<link rel="stylesheet" type="text/css" href="./css/reset.css">
+<link rel="stylesheet" type="text/css" href="./css/font.css">
+<link rel="stylesheet" type="text/css" href="./css/layout.css">
+<link rel="stylesheet" type="text/css" href="./css/board.css">
+<!--// E : css -->
+
+<!-- S : js -->
+<script type="text/javascript" src="./js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="./js/lib/jquery-ui.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<!--// E : js -->
+
+</head>
+<body>
+    <div class="pop-content pop-form">
+        <h4 class="dim-tit">
+            예약하기
+        </h4>
+    
+        <form method="POST" id="dataForm" name="dataForm">
+            <input type="hidden" id="authIdx" name="authIdx" value="">
+            <input type="hidden" id="authTimeFlag" name="authTimeFlag" value="N">
+            <input type="hidden" id="authConfirmFlag" name="authConfirmFlag" value="N">
+    
+            <div class="board-list mb10">
+                <table>
+                    <colgroup>
+                        <col style="width:auto;">
+                        <col style="width:auto;">
+                        <col style="width:auto;">
+                        <col style="width:100px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>강사</th>
+                            <th>강좌명</th>
+                            <th>요일</th>
+                            <th>시간</th>
+                            <th>개강일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>강기원</td>
+                            <td>수학</td>
+                            <td>일</td>
+                            <td>09:00~12:00</td>
+                            <td>1월 10일</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <table>
+                <colgroup>
+                    <col style="width:80px;">
+                    <col style="width:auto;">
+                    <col style="width:100px;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>이름</th>
+                        <td colspan="2"><input type="text" id="authNm" name="authNm" class="input-text" maxlength="15"></td>
+                    </tr>
+                    <tr>
+                        <th>휴대폰 번호</th>
+                        <td colspan="2">
+                            <div class="num-form">
+                                <select name="authHp1" id="authHp1" class="select select-sm-more" title="휴대폰번호 앞 세자리">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="017">016</option>
+                                    <option value="018">017</option>
+                                    <option value="019">018</option>
+                                </select>
+                                <input type="text" name="authHp2" id="authHp2" class="input-text input-text-sm-more onlyNumber" maxlength="4" title="휴대폰번호 가운데 네자리">
+                                <input type="text" name="authHp3" id="authHp3" class="input-text input-text-sm-more onlyNumber" maxlength="4" title="휴대폰번호 뒤 네자리">
+                            </div>
+                            <input type="button" id="ipa" class="btn btn-white" onclick="IfPhoneAuth();" value="인증번호 전송">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>인증번호</th>
+                        <td colspan="2"><div class="cert-form">
+                            <input type="text" class="input-text onlyNumber" id="authNumber" name="authNumber" maxlength="6" placeholder="인증번호">
+                            <span class="cert-txt" id="authTimer">3:00</span>
+                        </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    
+        <div class="dim-btn"><button class="btn btn-black" onClick="IfSend();">확인</button></div>
+    </div>
+</body>
+
+<script type="text/javascript">
+// 문자 수신 인증번호 받기
+var IfPhoneAuth = function() {
+	var authNm = $('#authNm').val();
+	var authHp1 = $('#authHp1').val();
+	var authHp2 = $('#authHp2').val();
+	var authHp3 = $('#authHp3').val();
+    var authHp = authHp1 + authHp2 + authHp3;
+
+    if (authNm == '') {
+        alert('이름을 입력해주세요.');
+        return;
+    }
+    if (authHp2 == '' || authHp3 == '' ) {
+        alert('휴대폰 번호를 입력해 주세요.');
+        return;
+    }
+
+    // 인증번호 받기
+    IfGetNumberAuth(authHp, 180, '909019');
+};
+
+// 문자 수신 인증번호 확인
+var IfSend = function() {
+	var authNm = $('#authNm').val();
+	var authHp1 = $('#authHp1').val();
+	var authHp2 = $('#authHp2').val();
+	var authHp3 = $('#authHp3').val();
+	var authHp = authHp1 + authHp2 + authHp3;
+
+	if( authNm == '' ){
+		alert('이름을 입력해주세요.');
+		return;
+	}
+	if( authHp1 == '' || authHp2 == '' || authHp3 == '' ){
+		alert('휴대폰 변호를 입력해 주세요');
+		return;
+	}
+
+	// 인증번호 체크
+    if ( !IfAuthConfirm(authHp) ) {
+        return;
+    } else {
+		alert('본인 인증이 완료 되었습니다.');
+		window.close(); 
+    }
+
+    // 인증문구
+    $('#authText').hide();
+	
+	$('#authConfirmFlag').val('Y');
+    $('#authTimeFlag').val('Y');
+    clearInterval(setInterValTimer);
+
+};
+</script>
+</html>

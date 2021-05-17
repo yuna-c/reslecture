@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+html, body, #wrap{ height:100%; counter-reset:section; overflow-x:hidden; overflow-y:auto; }
+#wrap{ width:100%; height:auto; margin:0 auto; position:relative; }
+
+/* header */
+#header{ font-size:14px; display:none; }
+#header .nav-bg{ display:none; position:absolute; top:0; left:0; right:0; bottom:0; background-color:rgba(0, 0, 0, .2); z-index:11; }
+#header .gnb-area{ height:95px; position:relative; background-color:#fff; z-index:1; }
+#header .gnb-area .btn-gnb{ padding:10px; position:absolute; top:30px; left:-10px; background:none; font-size:0; z-index:99999; }
+#header .gnb-area h1{ margin-left:35px; line-height:93px; position:relative; font-size:16px; font-weight:bold; z-index:99999; }
+#header .gnb-area .gnb li{ margin-left:10px; line-height:93px; float:left; }
+#header .gnb-area .gnb li a{ font-size:12px; letter-spacing:-.05em; }
+#header .gnb-area .gnb-select-wrap{ width:50px; position:absolute; top:-3px; right:-50px; background:url(../ico_gnb_select.png) 38px 53% no-repeat; overflow:hidden; }
+#header .gnb-area .gnb-select{ width:85px; padding-left:3px; padding-right:15px; background:transparent; border:0 none; font-size:16px; font-weight:bold; }
+#header .nav-area{ padding-bottom:45px; position:absolute; top:0; left:0; right:0; background-color:#fff; z-index:99; box-shadow:5px 9px 15px 0px rgba(0, 0, 0, .3); z-index:-1; transform:translate(0, -110%); -webkit-transform:translate(0, -110%); transition:all 0.3s ease-in; -webkit-transition:all 0.3s ease-in; }
+#header .nav-area > .float-area{ width:1180px; margin:0 auto; padding-left:250px; box-sizing:border-box; }
+#header .nav-area .nav{ width:560px; display:table; table-layout:fixed; }
+#header .nav-area dl{ display:table-cell; }
+#header .nav-area dl dt{ margin-bottom:20px; border-bottom:1px solid #e5e5e5; padding:30px 0 15px 0; }
+#header .nav-area dl dd{ margin-bottom:5px; }
+#header .nav-area dl dd a{ line-height:22px; display:block; }
+#header .nav-area dl dd a span{ display:inline-block; position:relative; color:#191111; transform:perspective(1px) translateZ(0); -webkit-transform:perspective(1px) translateZ(0); overflow:hidden; }
+#header .nav-area dl dd a span:after{ content:''; height:1px; display:block; position:absolute; left:0; right:100%; bottom:0; background-color:#191111; z-index:-1; transition:right .3s ease-out; -webkit-transition:right .3s ease-out; }
+#header .nav-area dl dd a:hover span:after{ right:0; }
+#header .family-site{ width:370px; }
+#header .family-site h1{ margin-bottom:20px; padding:22px 0 15px; border-bottom:1px solid #e5e5e5; text-align:right; }
+#header .family-site ul{ width:150px; margin:0 0 0 auto; }
+#header .family-site ul li{ margin-bottom:4px; }
+#header .family-site ul li a{ line-height:26px; font-weight:bold; }
+
+#header.nav-on .nav-bg{ display:block; }
+#header.nav-on .gnb-area{ background-color:rgba(0,0,0,0); z-index:13; }
+#header.nav-on .gnb-area .gnb{ opacity:0; }
+#header.nav-on .nav-area{ z-index:12; transform:translate(0, 0); -webkit-transform:translate(0, 0); transition:all .3s ease-in; -webkit-transition:all .3s ease-in; transition-delay:.1s; -webkit-transition-delay:.1s; }
+
+/* container */
+#container{ font-size:15px; }
+#container.event{ height:100%; padding:10px 0 0 0; }
+
+/* footer */
+#footer{ min-height:340px; padding-top:40px; padding-bottom:30px; display:none; font-size:14px; }
+#footer .content-layout > div{ float:left; }
+#footer .content-layout > div.family-site{ width:250px; margin-left:0; }
+#footer .family-site h1{ margin-bottom:50px; }
+#footer .family-site ul li{ margin-bottom:8px; padding-left:40px; }
+#footer .family-site ul li a{ line-height:22px; font-weight:bold; }
+#footer .footer-nav{ width:640px; position:relative; display:table; table-layout:fixed; }
+#footer .footer-nav dl{ display:table-cell; }
+#footer .footer-nav dl dt{ line-height:26px; margin-bottom:30px; padding-bottom:15px; border-bottom:1px solid #e5e5e5; }
+#footer .footer-nav dl dd{ margin-bottom:4px; }
+#footer .footer-nav dl dd a{ line-height:26px; color:#626262; }
+#footer .news-letter{ width:270px; }
+#footer .news-letter .dep-tit{ line-height:26px; margin-bottom:35px; padding-bottom:15px; border-bottom:1px solid #e5e5e5; }
+#footer .news-letter .copyright{ margin-top:40px; }
+#footer .news-letter .copyright ul li{ line-height:22px; font-size:12px; color:#626262; }
+#footer .btn-top{ margin-left:554px; position:absolute; left:50%; z-index:10; }
